@@ -143,7 +143,6 @@ int main(int argc, char **argv)
             {
                 cerr << "send reg msg error:" << request << endl;
             }
-            else
             sem_wait(&rwem); // 等待信号量，由子线程处理完注册的响应消息后，通知这里
         }
         break;
